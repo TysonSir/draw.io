@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-04-13T07:49:14.176Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" etag="1Nca8_0InXH_-ZLF6vRS" version="12.9.11" type="github">
+<mxfile host="app.diagrams.net" modified="2020-04-13T08:03:48.082Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" etag="fuGAE4f_98o7LD4fGPJo" version="12.9.11" type="github">
   <diagram id="0iGwgGr-Oi8jdjV9H6Ax" name="Page-1">
-    <mxGraphModel dx="2489" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2249" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -220,8 +220,14 @@
         <mxCell id="Dua-MCm0FBzaHcsmr25D-40" value="&lt;pre style=&quot;font-family: &amp;quot;source code pro&amp;quot; ; font-size: 10.5pt&quot;&gt;WxMonitorThread&lt;/pre&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#008a00;strokeColor=#005700;fontColor=#ffffff;" vertex="1" parent="1">
           <mxGeometry x="-540" y="600" width="240" height="70" as="geometry" />
         </mxCell>
+        <mxCell id="Dua-MCm0FBzaHcsmr25D-58" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Dua-MCm0FBzaHcsmr25D-41" target="Dua-MCm0FBzaHcsmr25D-55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="Dua-MCm0FBzaHcsmr25D-41" value="&lt;pre style=&quot;font-family: &amp;#34;source code pro&amp;#34; ; font-size: 10.5pt&quot;&gt;&lt;span&gt;pushMsgToWxUser&lt;/span&gt;&lt;/pre&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=center;fillColor=#647687;strokeColor=#314354;fontColor=#ffffff;" vertex="1" parent="1">
           <mxGeometry x="630" y="910" width="230" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Dua-MCm0FBzaHcsmr25D-55" value="&lt;pre style=&quot;font-family: &amp;quot;source code pro&amp;quot; ; font-size: 10.5pt&quot;&gt;&lt;span&gt;for &lt;/span&gt;(String openId : userOpenIdList) {&lt;br&gt;    Long index = &lt;span&gt;this&lt;/span&gt;.&lt;span&gt;redisService&lt;/span&gt;.getMapIncr(Constants.&lt;span style=&quot;font-style: italic&quot;&gt;WX_NOTICE_INCR&lt;/span&gt;&lt;span&gt;, &lt;/span&gt;openId.concat(&lt;span&gt;&quot;_&quot;&lt;/span&gt;).concat(date))&lt;span&gt;;&lt;br&gt;&lt;/span&gt;&lt;span&gt;    &lt;/span&gt;String indexStr = String.&lt;span style=&quot;font-style: italic&quot;&gt;format&lt;/span&gt;(&lt;span&gt;&quot;[%d]&quot;&lt;/span&gt;&lt;span&gt;, &lt;/span&gt;index)&lt;span&gt;;&lt;br&gt;&lt;/span&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;span&gt;    if &lt;/span&gt;(firstCircle) {&lt;br&gt;        Map&amp;lt;String&lt;span&gt;, &lt;/span&gt;Object&amp;gt; first = (Map&amp;lt;String&lt;span&gt;, &lt;/span&gt;Object&amp;gt;) data.get(&lt;span&gt;&quot;first&quot;&lt;/span&gt;)&lt;span&gt;;&lt;br&gt;&lt;/span&gt;&lt;span&gt;        &lt;/span&gt;String value = first.get(&lt;span&gt;&quot;value&quot;&lt;/span&gt;).toString()&lt;span&gt;;&lt;br&gt;&lt;/span&gt;&lt;span&gt;        &lt;/span&gt;first.put(&lt;span&gt;&quot;value&quot;&lt;/span&gt;&lt;span&gt;, &lt;/span&gt;indexStr.concat(value))&lt;span&gt;;&lt;br&gt;&lt;/span&gt;&lt;span&gt;        &lt;/span&gt;data.put(&lt;span&gt;&quot;first&quot;&lt;/span&gt;&lt;span&gt;, &lt;/span&gt;first)&lt;span&gt;;&lt;br&gt;&lt;/span&gt;&lt;span&gt;        &lt;/span&gt;firstCircle = &lt;span&gt;false;&lt;br&gt;&lt;/span&gt;&lt;span&gt;    &lt;/span&gt;}&lt;br&gt;    WxHttpClient.&lt;span style=&quot;font-style: italic&quot;&gt;sendTpMsg&lt;/span&gt;(token&lt;span&gt;, &lt;/span&gt;openId&lt;span&gt;, &lt;/span&gt;tpId&lt;span&gt;, &lt;/span&gt;jumpUrl&lt;span&gt;, &lt;/span&gt;data)&lt;span&gt;;&lt;br&gt;&lt;/span&gt;}&lt;/pre&gt;" style="text;html=1;strokeColor=#36393d;fillColor=#f9f7ed;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=0" vertex="1" parent="1">
+          <mxGeometry x="930" y="845" width="730" height="220" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
