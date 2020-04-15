@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-04-13T10:01:16.089Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" etag="_7iZdi6IbEshrRk-gTyP" version="12.9.11" type="github">
+<mxfile host="app.diagrams.net" modified="2020-04-15T07:30:39.257Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" etag="umn2ZzFt7jtjsw0kEFOW" version="12.9.11" type="github">
   <diagram id="0iGwgGr-Oi8jdjV9H6Ax" name="Page-1">
-    <mxGraphModel dx="2489" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2138" dy="796" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -240,6 +240,9 @@
         </mxCell>
         <mxCell id="Dua-MCm0FBzaHcsmr25D-60" value="&lt;pre style=&quot;font-family: &amp;#34;source code pro&amp;#34; ; font-size: 10.5pt&quot;&gt;RLock lock = &lt;span&gt;redissonClient&lt;/span&gt;.getLock(&lt;span style=&quot;font-style: italic&quot;&gt;LOCK_WX_ALARM_KEY&lt;/span&gt;)&lt;span&gt;;&lt;/span&gt;&lt;/pre&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
           <mxGeometry x="50" y="680" width="425" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Dua-MCm0FBzaHcsmr25D-64" value="&lt;div style=&quot;font-size: 17px;&quot;&gt;bug原因:&lt;/div&gt;&lt;div style=&quot;font-size: 17px;&quot;&gt;1.多线程的原因,导致获取自增编号的时候,出现弃用,出现后者上的问题&lt;/div&gt;&lt;div style=&quot;font-size: 17px;&quot;&gt;2.其它发送到微信服务器后，先后机制也不清晰，不排除有问题&lt;/div&gt;&lt;div style=&quot;font-size: 17px;&quot;&gt;&lt;br style=&quot;font-size: 17px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 17px;&quot;&gt;目前方案的弊端：&lt;/div&gt;&lt;div style=&quot;font-size: 17px;&quot;&gt;1.消息丢失了无感知,更毫无幂等性可言&lt;/div&gt;&lt;div style=&quot;font-size: 17px;&quot;&gt;&lt;br style=&quot;font-size: 17px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 17px;&quot;&gt;解决方案:&lt;/div&gt;&lt;div style=&quot;font-size: 17px;&quot;&gt;1.目前通过加锁尽量保障消息的先后抵达&lt;/div&gt;&lt;div style=&quot;font-size: 17px;&quot;&gt;2.[后续]用量大的话,就改用rocketMq来传递&amp;lt;事物消息&amp;gt;,搭建新项目监控中心(jian24-monitor),采用数据表实现幂等性处理。&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;fontStyle=1;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="280" y="100" width="520" height="340" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
