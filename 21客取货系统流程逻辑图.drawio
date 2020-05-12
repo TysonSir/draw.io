@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-05-12T07:54:43.441Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" etag="ssrf8AS-WXPib1JlNOvK" version="13.0.9" type="github">
+<mxfile host="app.diagrams.net" modified="2020-05-12T07:59:30.045Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" etag="RZzBM9aCB54FlHps7K3i" version="13.0.9" type="github">
   <diagram id="OL-irD95xAdoa4F7DFmY" name="Page-1">
-    <mxGraphModel dx="2269" dy="713" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2269" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -59,8 +59,8 @@
         <mxCell id="P0mErR6XbF75XVscWNr0-19" value="3.取货关门下取货单" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=15;" parent="1" vertex="1">
           <mxGeometry x="503" y="588" width="150" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="nfWY01UJ80crQiQMGP8v-3" value="&lt;font style=&quot;font-size: 20px&quot;&gt;用户开门的时候,输入取货码,这个是谁，有手机号,注册用户&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="110" y="830" width="430" height="60" as="geometry" />
+        <mxCell id="nfWY01UJ80crQiQMGP8v-3" value="&lt;font style=&quot;font-size: 20px&quot;&gt;*. 用户开门的时候,输入取货码,这个是谁，有手机号,注册用户&lt;br&gt;&lt;div&gt;&lt;span&gt;*. 取货单号，取货人， 取货码，等信息告诉我们，我们要去建表管理&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;*. 取货的时候，默认注册app类型的用户，用于开门关门流程&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;*. 商品的映射问题要解决。&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;*. 订单对账接口，给到他们（需要的时候）&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="text;html=1;strokeColor=#d79b00;fillColor=#ffe6cc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="69" y="40" width="690" height="140" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
